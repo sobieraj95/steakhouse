@@ -1,0 +1,10 @@
+.header{
+    display:flex;
+    margin: 2rem 0;
+    background-color: blue;
+    color:red;
+
+    &__logo{
+        width:20rem;
+    }
+}
