@@ -226,8 +226,8 @@ body {
     transition: all 1s ease-in-out; }
 
 .containter {
-  background-color: white;
-  min-height: 80rem; }
+  position: relative;
+  background-color: white; }
 
 .nav {
   height: 8.1rem;
@@ -237,13 +237,16 @@ body {
   text-transform: capitalize;
   padding: 0 14.8rem;
   box-shadow: 0px 1px 21px rgba(0, 0, 0, 0.052); }
-  @media (max-width: 75em) {
-    .nav {
-      padding: 0 5rem; } }
+
+.swiper-welcome {
+  display: flex;
+  overflow: hidden;
+  position: relative; }
   @media (max-width: 62.5em) {
-    .nav {
-      flex-direction: column;
-      height: auto; } }
+    .swiper-welcome {
+      margin-top: 1.6rem;
+      margin-right: 1.6rem;
+      margin-left: 1.6rem; } }
 
 .swiper-logobar-container {
   margin: 0 28rem; }
@@ -256,14 +259,6 @@ body {
   @media (max-width: 62.5em) {
     .swiper-logobar-container {
       margin: 0 3rem; } }
-
-.swiper-welcome {
-  display: flex;
-  overflow: hidden;
-  position: relative; }
-  @media (max-width: 62.5em) {
-    .swiper-welcome {
-      margin: 0 1.6rem; } }
 
 .advertisements {
   margin: 0 3.6rem;
@@ -279,15 +274,29 @@ body {
 
 .nav__menu-toggle-button {
   display: none;
-  margin: 2.5rem auto; }
+  margin: 2.5rem auto;
+  position: fixed;
+  top: 3rem;
+  left: 4.6rem;
+  z-index: 15; }
   @media (max-width: 62.5em) {
     .nav__menu-toggle-button {
-      display: block; } }
+      display: flex; } }
 
-.nav__menu-toggle-button.clicked ~ .nav__website-menu,
-.nav__menu-toggle-button.clicked ~ .nav__user-menu {
-  transition: all 1s ease;
-  display: flex; }
+@media (max-width: 75em) {
+  .nav {
+    padding: 0 5rem; } }
+
+@media (max-width: 62.5em) {
+  .nav {
+    height: 0;
+    flex-direction: column; }
+    .nav__menu-toggle-button.clicked ~ .nav__website-menu,
+    .nav__menu-toggle-button.clicked ~ .nav__user-menu {
+      display: flex;
+      z-index: 15;
+      height: auto;
+      flex-direction: column; } }
 
 .nav__logo {
   margin-right: 4rem; }
@@ -318,6 +327,14 @@ body {
   .nav__link img {
     filter: invert(0);
     transition: all 0.3s; }
+  @media (max-width: 62.5em) {
+    .nav__link {
+      width: 25rem;
+      padding: 2rem auto;
+      justify-content: center;
+      margin: 0.5rem 0;
+      font-size: 1.7rem;
+      height: auto; } }
 
 .nav__link:hover {
   background-color: #920303;
@@ -325,6 +342,10 @@ body {
   fill: white; }
   .nav__link:hover img {
     filter: invert(1); }
+  @media (max-width: 62.5em) {
+    .nav__link:hover {
+      box-shadow: 0px 14px 22px 3px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px) scale(1.1); } }
 
 .nav .active {
   background-color: #920303;
@@ -332,6 +353,20 @@ body {
   fill: white; }
   .nav .active img {
     filter: invert(1); }
+
+@media (max-width: 62.5em) {
+  .nav.open-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.925);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly; } }
 
 .advertisements .ad {
   position: relative;

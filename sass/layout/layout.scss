@@ -1,8 +1,8 @@
 @import "../../sass/abstracts/_variables.scss";
 @import "../../sass/abstracts/mixins";
 .containter {
+  position: relative;
   background-color: $color-primary;
-  min-height: 80rem;
 }
 // NAVIGATION PANEL
 .nav {
@@ -14,13 +14,17 @@
   padding: 0 14.8rem;
   box-shadow: 0px 1px 21px rgba($color-secondary, 0.052);
 
-  @include respond(t1200) {
-    padding: 0 5rem;
-  }
+ 
+}
 
+.swiper-welcome {
+  display: flex;
+  overflow: hidden;
+  position: relative;
   @include respond(t1000) {
-    flex-direction: column;
-    height: auto;
+    margin-top: 1.6rem;
+    margin-right: 1.6rem;
+    margin-left:1.6rem;
   }
 }
 
@@ -40,15 +44,7 @@
     margin: 0 3rem;
   }
 }
-.swiper-welcome {
-  display: flex;
-  overflow: hidden;
-  position: relative;
 
-  @include respond(t1000) {
-    margin: 0 1.6rem;
-  }
-}
 
 // ADVERTISEMENTS BOX
 .advertisements {

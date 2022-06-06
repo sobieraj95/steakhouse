@@ -120,13 +120,18 @@
 
         $(".hamburger").on("click", function () {
           const burger = document.querySelector(".hamburger");
-          if (burger.classList.contains("clicked")) {
+          if (!burger.classList.contains("clicked")) {
             $(this).addClass("clicked");
-          } else $(this).removeClass("clicked");
+            $(".nav").addClass("open-bg");
+          } else {
+            $(this).removeClass("clicked");
+            $(".nav").removeClass("open-bg");
+          }
         });
 
         $(".nav__link").on("click", function () {
           $(".hamburger").removeClass("clicked");
+          $(".nav").removeClass("open-bg");
         });
 
         //SIMPLY MAIN SWIPER INIT
@@ -164,18 +169,26 @@
             1400: {
               slidesPerView: 5,
               slidesPerGroup: 0,
+              allowTouchMove: false,
+              grabCursor:false,
             },
             1000: {
               slidesPerView: 4,
               slidesPerGroup: 1,
+              allowTouchMove: true,
+              grabCursor:true,
             },
             600: {
               slidesPerView: 3,
               slidesPerGroup: 1,
+              allowTouchMove: true,
+              grabCursor:true,
             },
             300: {
               slidesPerView: 2,
               slidesPerGroup: 1,
+              allowTouchMove: true,
+              grabCursor:true,
             },
           },
         });

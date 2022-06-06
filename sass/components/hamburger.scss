@@ -3,7 +3,7 @@
 .hamburger {
   width: 3.5rem;
   height: 0.5rem;
-  border:0;
+  border: 0;
   background-color: $color-tertiary;
   position: relative;
   transition: 0.2s all linear;
@@ -15,7 +15,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: $color-secondary;
     transform: translateY(-10px);
     transition: 0.2s transform linear;
   }
@@ -26,7 +26,7 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: $color-secondary;
     transform: translateY(10px);
     transition: 0.2s transform linear;
   }
