@@ -1,27 +1,18 @@
 .nav {
-  #btnControl {
+  
+  &__menu-toggle-button{
     display: none;
-  }
-
-  #btnControl:checked ~ .nav__website-menu,
-  #btnControl:checked ~ .nav__user-menu {
-    display: flex;
-    justify-content: center;
-  }
-
-  .mobile-menu-button {
-    margin: 1rem 0;
-    display: none;
-    transition: all 0.3s ease;
-
-    img {
-      height: 5rem;
-    }
+    margin:2.5rem auto;
 
     @include respond(t1000) {
-      display: flex;
-      justify-content: center;
+      display: block;
     }
+  }
+  
+  &__menu-toggle-button.clicked ~ &__website-menu,
+  &__menu-toggle-button.clicked ~ &__user-menu{
+    transition: all 1s ease;
+    display:flex;
   }
 
   &__logo {
@@ -38,8 +29,8 @@
     align-items: center;
 
     @include respond(t1000) {
-      flex-direction: row;
       display: none;
+
     }
   }
 
@@ -63,6 +54,8 @@
       transition: all 0.3s;
     }
   }
+
+ 
 
   &__link:hover {
     background-color: $color-tertiary;
@@ -138,7 +131,7 @@
 
       & > a {
         width: 2.7rem;
-        margin-right: 1.4rem;
+        margin-right: 14px;
         transition: all 0.3s;
       }
 

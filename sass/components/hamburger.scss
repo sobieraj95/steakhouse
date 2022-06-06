@@ -1,0 +1,44 @@
+@import "../abstracts/_variables.scss";
+
+.hamburger {
+  width: 3.5rem;
+  height: 0.5rem;
+  border:0;
+  background-color: $color-tertiary;
+  position: relative;
+  transition: 0.2s all linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transform: translateY(-10px);
+    transition: 0.2s transform linear;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transform: translateY(10px);
+    transition: 0.2s transform linear;
+  }
+
+  &.clicked {
+    background-color: transparent;
+  }
+
+  &.clicked::before {
+    transform: rotate(45deg);
+  }
+  &.clicked::after {
+    transform: rotate(-45deg);
+  }
+}

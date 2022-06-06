@@ -13,9 +13,8 @@
   <body>
     <div class="containter">
       <nav class="nav">
-        <input type="checkbox" id="btnControl" />
-        <label class="mobile-menu-button" for="btnControl"><img src="img/logo.png" alt="logo" /></label>
-        <div class="nav__website-menu">
+        <button class="hamburger nav__menu-toggle-button"></button>
+        <div id="nav__website-menu" class="nav__website-menu">
           <img class="nav__logo" src="img/logo.png" alt="logo" />
           <a href="#" class="nav__link">steaks</a>
           <a href="#" class="nav__link">burgers</a>
@@ -24,7 +23,7 @@
           <a href="#" class="nav__link">gdzie dowozimy?</a>
           <a href="#" class="nav__link">kontakt</a>
         </div>
-        <div class="nav__user-menu">
+        <div id="nav__user-menu" class="nav__user-menu">
           <a href="#" class="nav__link"> <img src="img/myaccount.svg" /><span class="nav__link-text">moje konto</span> </a>
           <a href="#" class="nav__link"> <img src="img/bash.svg" /><span class="nav__link-text">koszyk</span> </a>
 
@@ -119,11 +118,23 @@
           $(this).addClass("active");
         });
 
+        $(".hamburger").on("click", function () {
+          const burger = document.querySelector(".hamburger");
+          if (burger.classList.contains("clicked")) {
+            $(this).addClass("clicked");
+          } else $(this).removeClass("clicked");
+        });
+
+        $(".nav__link").on("click", function () {
+          $(".hamburger").removeClass("clicked");
+        });
+
         //SIMPLY MAIN SWIPER INIT
         const swiper = new Swiper(".swiper-welcome", {
           direction: "horizontal",
           loop: true,
           speed: 1000,
+
           autoplay: {
             autoplay: false,
             disableOnInteraction: false,
@@ -143,25 +154,28 @@
           loop: true,
           speed: 500,
           delay: 1000,
+          allowTouchMove: false,
+          loopFillGroupWithBlank: true,
           autoplay: {
+            autoplay: true,
             disableOnInteraction: false,
           },
           breakpoints: {
-            300: {
-              slidesPerView: 2,
-              autoplay: true,
-            },
-            600: {
-              slidesPerView: 3,
-              autoplay: true,
+            1400: {
+              slidesPerView: 5,
+              slidesPerGroup: 0,
             },
             1000: {
               slidesPerView: 4,
-              autoplay: true,
+              slidesPerGroup: 1,
             },
-            1400: {
-              slidesPerView: 5,
-              autoplay: false,
+            600: {
+              slidesPerView: 3,
+              slidesPerGroup: 1,
+            },
+            300: {
+              slidesPerView: 2,
+              slidesPerGroup: 1,
             },
           },
         });

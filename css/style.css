@@ -92,6 +92,40 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
 
+.hamburger {
+  width: 3.5rem;
+  height: 0.5rem;
+  border: 0;
+  background-color: #920303;
+  position: relative;
+  transition: 0.2s all linear; }
+  .hamburger::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transform: translateY(-10px);
+    transition: 0.2s transform linear; }
+  .hamburger::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    transform: translateY(10px);
+    transition: 0.2s transform linear; }
+  .hamburger.clicked {
+    background-color: transparent; }
+  .hamburger.clicked::before {
+    transform: rotate(45deg); }
+  .hamburger.clicked::after {
+    transform: rotate(-45deg); }
+
 .swiper-logobar {
   height: 7.7rem;
   width: 100%;
@@ -243,24 +277,17 @@ body {
       height: auto;
       margin: 0 1.6rem; } }
 
-.nav #btnControl {
-  display: none; }
-
-.nav #btnControl:checked ~ .nav__website-menu,
-.nav #btnControl:checked ~ .nav__user-menu {
-  display: flex;
-  justify-content: center; }
-
-.nav .mobile-menu-button {
-  margin: 1rem 0;
+.nav__menu-toggle-button {
   display: none;
-  transition: all 0.3s ease; }
-  .nav .mobile-menu-button img {
-    height: 5rem; }
+  margin: 2.5rem auto; }
   @media (max-width: 62.5em) {
-    .nav .mobile-menu-button {
-      display: flex;
-      justify-content: center; } }
+    .nav__menu-toggle-button {
+      display: block; } }
+
+.nav__menu-toggle-button.clicked ~ .nav__website-menu,
+.nav__menu-toggle-button.clicked ~ .nav__user-menu {
+  transition: all 1s ease;
+  display: flex; }
 
 .nav__logo {
   margin-right: 4rem; }
@@ -273,7 +300,6 @@ body {
   align-items: center; }
   @media (max-width: 62.5em) {
     .nav__website-menu, .nav__user-menu {
-      flex-direction: row;
       display: none; } }
 
 .nav__user-menu > * {
@@ -348,7 +374,7 @@ body {
     display: flex; }
     .advertisements .ad_icon-links > a {
       width: 2.7rem;
-      margin-right: 1.4rem;
+      margin-right: 14px;
       transition: all 0.3s; }
     .advertisements .ad_icon-links > a:hover {
       transform: translateY(-0.3rem) scale(1.1); }
