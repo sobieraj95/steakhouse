@@ -1,6 +1,35 @@
 .nav {
+  #btnControl {
+    display: none;
+  }
+
+  #btnControl:checked ~ .nav__website-menu,
+  #btnControl:checked ~ .nav__user-menu {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-menu-button {
+    margin: 1rem 0;
+    display: none;
+    transition: all 0.3s ease;
+
+    img {
+      height: 5rem;
+    }
+
+    @include respond(t1000) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
   &__logo {
     margin-right: 4rem;
+
+    @include respond(t1000) {
+      display: none;
+    }
   }
 
   &__website-menu,
@@ -9,7 +38,8 @@
     align-items: center;
 
     @include respond(t1000) {
-      flex-direction: column;
+      flex-direction: row;
+      display: none;
     }
   }
 

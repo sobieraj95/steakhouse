@@ -209,8 +209,7 @@ body {
   @media (max-width: 62.5em) {
     .nav {
       flex-direction: column;
-      height: auto;
-      display: none; } }
+      height: auto; } }
 
 .swiper-logobar-container {
   margin: 0 28rem; }
@@ -244,15 +243,38 @@ body {
       height: auto;
       margin: 0 1.6rem; } }
 
+.nav #btnControl {
+  display: none; }
+
+.nav #btnControl:checked ~ .nav__website-menu,
+.nav #btnControl:checked ~ .nav__user-menu {
+  display: flex;
+  justify-content: center; }
+
+.nav .mobile-menu-button {
+  margin: 1rem 0;
+  display: none;
+  transition: all 0.3s ease; }
+  .nav .mobile-menu-button img {
+    height: 5rem; }
+  @media (max-width: 62.5em) {
+    .nav .mobile-menu-button {
+      display: flex;
+      justify-content: center; } }
+
 .nav__logo {
   margin-right: 4rem; }
+  @media (max-width: 62.5em) {
+    .nav__logo {
+      display: none; } }
 
 .nav__website-menu, .nav__user-menu {
   display: flex;
   align-items: center; }
   @media (max-width: 62.5em) {
     .nav__website-menu, .nav__user-menu {
-      flex-direction: column; } }
+      flex-direction: row;
+      display: none; } }
 
 .nav__user-menu > * {
   display: flex;
