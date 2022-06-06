@@ -2,9 +2,14 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
+
+@import "components/button.scss";
+@import "components/swiper-logobar.scss";
+@import "components/swiper-welcome.scss";
+
+@import "layout/layout.scss";
 
 @import "pages/home";

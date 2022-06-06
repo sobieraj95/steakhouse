@@ -1,10 +1,183 @@
-.header{
-    display:flex;
-    margin: 2rem 0;
-    background-color: blue;
-    color:red;
+.nav {
+  &__logo {
+    margin-right: 4rem;
+  }
 
-    &__logo{
-        width:20rem;
+  &__website-menu,
+  &__user-menu {
+    display: flex;
+    align-items: center;
+
+    @include respond(t1000) {
+      flex-direction: column;
     }
+  }
+
+  &__user-menu > * {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    box-sizing: border-box;
+    height: 5.4rem;
+    margin: 0 0.2rem;
+    padding: 1rem 2.45rem;
+    display: flex;
+    border-radius: 1rem;
+    align-items: center;
+    transition: all 0.3s;
+
+    img {
+      filter: invert(0);
+      transition: all 0.3s;
+    }
+  }
+
+  &__link:hover {
+    background-color: $color-tertiary;
+    color: $color-primary;
+    fill: $color-primary;
+
+    img {
+      filter: invert(1);
+    }
+  }
+
+  .active {
+    background-color: $color-tertiary;
+    color: $color-primary;
+    fill: $color-primary;
+
+    img {
+      filter: invert(1);
+    }
+  }
+}
+
+.advertisements {
+  .ad {
+    position: relative;
+    display: flex;
+    align-self: stretch;
+    border-radius: 0.7rem;
+    flex: 0 1 50%;
+    flex-direction: column;
+    padding: 8rem 12.5rem;
+    overflow: hidden;
+
+    @include respond(t1200) {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include respond(t1000) {
+      padding: 5rem 0;
+    }
+
+    & > * {
+      z-index: 1;
+    }
+
+    &__bigparagraph {
+      font-weight: 700;
+      font-style: normal;
+      font-size: 3.5rem;
+      color: $color-primary;
+      line-height: 32px;
+    }
+
+    &__paragraph {
+      width: 32.4rem;
+      line-height: 32px;
+      margin-top: 2.9rem;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2rem;
+      color: $color-primary;
+
+      @include respond(t1200) {
+        text-align: center;
+      }
+    }
+
+    &_icon-links {
+      margin-top: 1.4rem;
+      display: flex;
+
+      & > a {
+        width: 2.7rem;
+        margin-right: 1.4rem;
+        transition: all 0.3s;
+      }
+
+      & > a:hover {
+        transform: translateY(-0.3rem) scale(1.1);
+      }
+    }
+
+    &__extra-background-image {
+      position: absolute;
+      bottom: 0;
+      right: 11.6rem;
+
+      @include respond(t1800) {
+        right: 3rem;
+        transform: scale(0.9);
+        bottom: -10%;
+      }
+
+      @include respond(t1600) {
+        right: -2rem;
+        transform: scale(0.9);
+        bottom: -10%;
+      }
+
+      @include respond(t1400) {
+        right: -3rem;
+        transform: scale(0.7);
+        bottom: -30%;
+      }
+
+      @include respond(t1200) {
+        display: none;
+      }
+    }
+  }
+
+  .ad:first-child {
+    margin-right: 1.6rem;
+    @include respond(t1000) {
+      margin-right: 0rem;
+    }
+  }
+
+  @include respond(t1000) {
+    .ad:not(:first-child) {
+      margin-top: 1.6rem;
+    }
+  }
+
+  .bg1 {
+    background: url("../../img/first_ad.png");
+  }
+
+  .bg1::after {
+    content: "";
+    background-image: linear-gradient(90deg, $color-secondary 1.82%, rgba($color-secondary, 0.0001) 99.07%);
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+  }
+
+  .bg2 {
+    background-color: $color-secondary;
+  }
 }

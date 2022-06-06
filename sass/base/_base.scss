@@ -1,28 +1,51 @@
-//BASE
+::-webkit-scrollbar {
+  display: none;
+}
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 *,
 *::before,
-*::after{
-    box-sizing: inherit;
+*::after {
+  box-sizing: inherit;
 }
 
-html{
-    box-sizing: border-box;
+html {
+  font-size: 62.5%;
+
+  @include respond(t1800) {
     font-size: 62.5%;
+  }
+
+  @include respond(t1600) {
+    font-size: 56.25%;
+  }
+
+  @include respond(t1400) {
+    font-size: 50%;
+  }
+
+  @include respond(t1000) {
+    font-size: 43.75%;
+  }
+
+  @include respond(t500) {
+    font-size: 37.5%;
+  }
 }
 
-body{
-    background-color: $color-primary;
+body {
+  margin: 0 auto;
+  max-width: 192rem;
+  background-color: $color-primary;
+  box-sizing: border-box;
 }
 
-.containter{
-    margin: 0 auto; 
-    max-width: 100%;
-    background-color: red;
-    min-height: 80rem;
+a:visited,
+a:link {
+  text-decoration: none;
+  color: $color-secondary;
 }

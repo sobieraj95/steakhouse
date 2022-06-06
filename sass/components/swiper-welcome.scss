@@ -1,0 +1,107 @@
+.swiper-welcome {
+  .swiper-slide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @include respond(t1000) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+      transition: 0.2s;
+      display: block;
+      max-width: 100%;
+
+      @include respond(t1000) {
+        order:1;
+        border-radius: 1rem;
+      }
+    }
+
+    &__box {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15rem;
+      padding-top: 10.5rem;
+      
+      
+
+      @include respond(t1400) {
+        padding-left: 0rem;
+        padding-top: 0rem;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(t1000) {
+          order:2;
+          margin: 5rem 0;
+        }
+      }
+
+      &__header {
+        width: 56.8rem;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 5.6rem;
+        line-height: 6.5rem;
+        color: $color-secondary;
+
+        @include respond(t1400) {
+          text-align: center;
+        }
+
+        @include respond(t1400) {
+          font-size: 4rem;
+        }
+      }
+
+      &__paragraph {
+        margin-top: 2.8rem;
+        width: 40.6rem;
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 2.5rem;
+
+        @include respond(t1400) {
+          text-align: center;
+        }
+      }
+
+      .button {
+        margin-top: 3.6rem;
+      }
+    }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    left: 15rem;
+    top: 54.5rem;
+    width: auto;
+
+    &-bullet,
+    &-bullet-active {
+      box-sizing: content-box;
+      display: inline-block;
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+
+    &-bullet {
+      border: 2px solid #d1d1d1;
+      background-color: #d1d1d1;
+      transition: all 1s ease-in-out;
+    }
+    &-bullet-active {
+      background-color: $color-primary;
+      border: 2px solid $color-secondary;
+      transition: all 1s ease-in-out;
+    }
+  }
+}

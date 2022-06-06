@@ -1,0 +1,31 @@
+@import "../../sass/abstracts/_variables.scss";
+@import "../../sass/abstracts/mixins";
+
+.button{
+    margin-top:2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: center; 
+    line-height: 1.4rem;
+    width: 20rem;
+    height: 5rem;
+    border-radius: 1rem;
+    background-color: $color-tertiary;
+    transition: all .3s;
+
+    &:link, &:visited{
+        color:$color-primary;
+    } 
+
+    &--whiteshadow:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 2rem 5rem rgba($color-primary,.3);
+    }
+ 
+    &--blackshadow:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 3rem rgba($color-secondary,.3);
+    }
+}       

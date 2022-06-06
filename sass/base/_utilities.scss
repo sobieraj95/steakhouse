@@ -1,0 +1,23 @@
+.u-text-back-black{
+    padding: 1px 5px;
+    text-align: center;
+    background-color: black;
+}
+.u-text-back-black-white{
+    padding: 1px 5px;
+    text-align: center;
+    background-color: black;
+    color:$color-primary;
+}
+
+.u-text-back-red{
+    padding: 1px 5px;
+    text-align: center;
+    background-color: $color-tertiary;
+}
+
+.u-text-black-bold{
+    font-size: 1.9rem;
+    font-weight: bold;
+    color: $color-secondary;
+}

@@ -1,31 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/logo.png">
-        
-        <title>STEAKHOUSE</title>
-    </head>
-    <body>    
-        <div class="containter">
-            <header class="header">
-                <img class="header__logo" src="img/logo.png" alt="logo"/>
-                <div class="header__menu">
-                    <ul class="menu__columns">
-                        <li class="menu_calls">aktualności</li>
-                        <li class="menu_calls">o nas</li>
-                        <li class="menu_calls">menu</li>
-                        <li class="menu_calls">kontakt</li>
-                    </ul>
-                </div>
-            </header>
-            x
-            x
-            x
+  <head>
+    <title>STEAKHOUSE</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="containter">
+      <span style="font-size: 5rem">TU JEST MENU XD</span>
+      <nav class="nav">
+        <div class="nav__website-menu">
+          <img class="nav__logo" src="img/logo.png" alt="logo" />
+          <a href="#" class="nav__link">steaks</a>
+          <a href="#" class="nav__link">burgers</a>
+          <a href="#" class="nav__link">french fries</a>
+          <a href="#" class="nav__link">drinks</a>
+          <a href="#" class="nav__link">gdzie dowozimy?</a>
+          <a href="#" class="nav__link">kontakt</a>
         </div>
-    </body>
+        <div class="nav__user-menu">
+          <a href="#" class="nav__link"> <img src="img/myaccount.svg" /><span class="nav__link-text">moje konto</span> </a>
+          <a href="#" class="nav__link"> <img src="img/bash.svg" /><span class="nav__link-text">koszyk</span> </a>
+
+          <a href="#" class="nav__link active"> <img src="img/order.svg" /><span class="nav__link-text">zamów</span> </a>
+        </div>
+      </nav>
+
+      <div class="swiper-welcome">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-slide__box">
+              <h1 class="swiper-slide__box__header"><span class="u-text-back-black-white">Rabat 10%</span> na pierwsze zamówienie!</h1>
+              <p class="swiper-slide__box__paragraph">
+                Do 20 stycznia złóż zamówienie na stronie i skorzystaj z <span class="u-text-black-bold">promocji -10%</span>. Spiesz się, czas trwania promocji
+                do końca lutego.
+              </p>
+              <a href="#" class="button button--blackshadow">Zamów online </a>
+            </div>
+            <img src="img/Bitmap.svg" class="swiper-welcome_image" />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide__box">
+              <h1 class="swiper-slide__box__header">Dodatkowe <span class="u-text-back-black-white">20%</span> na drugie zamówienie!</h1>
+              <p class="swiper-slide__box__paragraph">
+                Złóż zamówienie, a następnie dokonaj kolejnego <span class="u-text-black-bold">w ciągu tygodnia</span>. Czas promocji nieograniczony.
+              </p>
+              <a href="#" class="button button--blackshadow">Zamów online </a>
+            </div>
+            <img src="img/Bitmap.svg" class="swiper-welcome_image" />
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-slide__box">
+              <h1 class="swiper-slide__box__header">
+                <span class="u-text-back-black-white">3</span> burgery w cenie <span class="u-text-back-black-white">1</span>.
+              </h1>
+              <p class="swiper-slide__box__paragraph">
+                Tylko w <span class="u-text-black-bold">czwartki</span>. Śpiesz się, nie marnuj życia na kiepskie jedzenie.
+              </p>
+              <a href="#" class="button button--blackshadow">Sprawdź !</a>
+            </div>
+            <img src="img/Bitmap.svg" class="swiper-welcome_image" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+      <div class="swiper-logobar-container">
+        <div class="swiper-logobar">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide slider-positioner">
+              <img class="shutters-slider-image" src="img/Bitmap-4.png" />
+            </div>
+            <div class="swiper-slide slider-positioner">
+              <img class="shutters-slider-image" src="img/Bitmap -5.png" />
+            </div>
+            <div class="swiper-slide slider-positioner">
+              <img class="shutters-slider-image" src="img/Bitmap-1.png" />
+            </div>
+            <div class="swiper-slide slider-positioner">
+              <img class="shutters-slider-image" src="img/Bitmap-2.png" />
+            </div>
+            <div class="swiper-slide slider-positioner">
+              <img class="shutters-slider-image" src="img/Bitmap-3.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="advertisements">
+        <div class="ad bg1">
+          <p class="ad__bigparagraph">Zestaw dla 3 osób</p>
+          <p class="ad__paragraph">Razem smakuje lepiej! Zamów zestawy obiadowe dla 3 osób już od <span class="u-text-back-black">39 zł</span></p>
+          <a href="#" class="button button--whiteshadow">Zamów online </a>
+        </div>
+        <div class="ad bg2">
+          <p class="ad__bigparagraph">UberEats</p>
+          <p class="ad__paragraph">Zamawiaj w aplikacji <span class="u-text-back-red">10% taniej.</span> Pobierz aplikację UberEats już dziś.</p>
+          <div class="ad_icon-links">
+            <a href="#"><img src="img/play-store.svg" /></a>
+            <a href="#"><img src="img/app-store.svg" /></a>
+            <a href="#"><img src="img/huawei-shop.svg" /></a>
+          </div>
+          <img class="ad__extra-background-image" src="img/second_ad.png" />
+          <a href="#" class="button button--whiteshadow">Zamów online </a>
+        </div>
+      </div>
+
+      <script>
+        // AD/REMOVE ACTIVE STATE MENU
+        $(".nav__link").on("click", function () {
+          $(".nav__link").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        //SIMPLY MAIN SWIPER INIT
+        const swiper = new Swiper(".swiper-welcome", {
+          direction: "horizontal",
+          loop: true,
+          speed: 1000,
+          autoplay: {
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            type: "bullets",
+            renderBullet: function (index, className) {
+              return '<div class="' + className + '"></div>';
+            },
+            clickable: true,
+          },
+        });
+        //SIMPLY LOGOBAT SWIPER INIT
+        const swiper__logobar = new Swiper(".swiper-logobar", {
+          direction: "horizontal",
+          loop: true,
+          speed: 500,
+          autoplay: {
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            300: {
+              slidesPerView: 2,
+              autoplay: {
+                autoplay: true,
+              },
+            },
+            600: {
+              slidesPerView: 3,
+              autoplay: {
+                autoplay: true,
+              },
+            },
+            1000: {
+              slidesPerView: 4,
+              autoplay: {
+                autoplay: true,
+              },
+            },
+            1400: {
+              slidesPerView: 5,
+            },
+          },
+        });
+      </script>
+    </div>
+  </body>
 </html>
