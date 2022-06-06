@@ -132,10 +132,10 @@ body {
         padding-top: 0rem;
         justify-content: center;
         align-items: center; } }
-  @media (max-width: 87.5em) and (max-width: 62.5em) {
-    .swiper-welcome .swiper-slide__box {
-      order: 2;
-      margin: 5rem 0; } }
+    @media (max-width: 62.5em) {
+      .swiper-welcome .swiper-slide__box {
+        order: 2;
+        margin: 5rem 0; } }
     .swiper-welcome .swiper-slide__box__header {
       width: 56.8rem;
       font-style: normal;
@@ -168,6 +168,15 @@ body {
   left: 15rem;
   top: 54.5rem;
   width: auto; }
+  @media (max-width: 112.5em) {
+    .swiper-welcome .swiper-pagination {
+      top: auto;
+      bottom: 0rem; } }
+  @media (max-width: 62.5em) {
+    .swiper-welcome .swiper-pagination {
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 1rem; } }
   .swiper-welcome .swiper-pagination-bullet, .swiper-welcome .swiper-pagination-bullet-active {
     box-sizing: content-box;
     display: inline-block;

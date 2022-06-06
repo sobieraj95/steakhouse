@@ -17,7 +17,7 @@
       max-width: 100%;
 
       @include respond(t1000) {
-        order:1;
+        order: 1;
         border-radius: 1rem;
       }
     }
@@ -27,19 +27,17 @@
       flex-direction: column;
       padding-left: 15rem;
       padding-top: 10.5rem;
-      
-      
 
       @include respond(t1400) {
         padding-left: 0rem;
         padding-top: 0rem;
         justify-content: center;
         align-items: center;
+      }
 
-        @include respond(t1000) {
-          order:2;
-          margin: 5rem 0;
-        }
+      @include respond(t1000) {
+        order: 2;
+        margin: 5rem 0;
       }
 
       &__header {
@@ -84,6 +82,17 @@
     left: 15rem;
     top: 54.5rem;
     width: auto;
+
+    @include respond(t1800) {
+      top:auto;
+      bottom: 0rem;
+    }
+
+    @include respond(t1000) {
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 1rem;
+    }
 
     &-bullet,
     &-bullet-active {
