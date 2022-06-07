@@ -50,6 +50,10 @@
         line-height: 6.5rem;
         color: $color-secondary;
 
+
+        @include respond(t1000) {
+          padding: 0 5rem;
+        }
         span {
           position: relative;
           color:$color-primary;
@@ -66,6 +70,11 @@
           background-color: $color-secondary;
           z-index: -1;
           transform: translate(-50%, -53%);
+
+          @include respond(t1000) {
+            width: 109%;
+            height: 76%;
+          }
         }
 
         @include respond(t1200) {

@@ -7,7 +7,7 @@
   border-top: 5px solid $color-secondary;
   background: transparent;
   position: relative;
-  transition: .2s border-color linear;
+  transition: 0.2s border-color linear;
 
   &::before {
     content: "";
@@ -17,7 +17,7 @@
     width: 100%;
     border-top: 5px solid $color-secondary;
     transform: translateY(10px);
-    transition: .2s transform linear;
+    transition: 0.2s transform linear;
   }
   &::after {
     content: "";
@@ -27,7 +27,7 @@
     width: 100%;
     border-top: 5px solid $color-secondary;
     transform: translateY(25px);
-    transition: .2s transform linear;
+    transition: 0.2s transform linear;
   }
 
   &.clicked {
@@ -35,10 +35,11 @@
   }
 
   &.clicked::before {
-    border-color: $color-secondary;
+    border-color: $color-tertiary;
     transform: translateY(15px) rotate(45deg);
   }
   &.clicked::after {
+    border-color: $color-tertiary;
     transform: translateY(15px) rotate(-45deg);
   }
 }
