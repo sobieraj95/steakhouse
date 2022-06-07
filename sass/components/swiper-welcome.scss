@@ -59,13 +59,13 @@
         span::before {
           content:"";
           position: absolute;
-          top:56%;
+          top:53%;
           left:50%;
           width: 103%;
           height: 70%;
           background-color: $color-secondary;
           z-index: -1;
-          transform: translate(-50%, -56%);
+          transform: translate(-50%, -53%);
         }
 
         @include respond(t1200) {
@@ -121,6 +121,7 @@
       width: 1.2rem;
       height: 1.2rem;
       margin: 0 5rem;
+      opacity:1;
     }
 
     &-bullet:not(:last-child),

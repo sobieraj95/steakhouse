@@ -68,11 +68,11 @@
     display: flex;
     border-radius: 1rem;
     align-items: center;
-
+    transition: all .3s ease;
 
     img {
       filter: invert(0);
-      transition: all 0.3s;
+      transition: all 0.2s;
     }
 
     @include respond(t1000) {
