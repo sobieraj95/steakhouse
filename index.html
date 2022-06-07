@@ -35,9 +35,9 @@
       <div class="swiper-main">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header"><span class="">Rabat 10%</span> na pierwsze zamówienie!</h1>
-              <p class="swiper-slide__box__paragraph">
+            <div class="slide-container">
+              <h1 class="slide-container__header"><span class="">Rabat 10%</span> na pierwsze zamówienie!</h1>
+              <p class="slide-container__paragraph">
                 Do 20 stycznia złóż zamówienie na stronie i skorzystaj z <span class="u-text-black-bold">promocji -10%</span>. Spiesz się, czas trwania promocji
                 do końca lutego.
               </p>
@@ -46,9 +46,9 @@
             <img src="img/Bitmap.svg" class="swiper-welcome_image" />
           </div>
           <div class="swiper-slide">
-            <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header">Dodatkowe <span class="">20%</span> na drugie zamówienie!</h1>
-              <p class="swiper-slide__box__paragraph">
+            <div class="slide-container">
+              <h1 class="slide-container__header">Dodatkowe <span class="">20%</span> na drugie zamówienie!</h1>
+              <p class="slide-container__paragraph">
                 Złóż zamówienie, a następnie dokonaj kolejnego <span class="u-text-black-bold">w ciągu tygodnia</span>. Czas promocji nieograniczony.
               </p>
               <a href="#" class="button button--blackshadow">Zamów online </a>
@@ -56,9 +56,9 @@
             <img src="img/Bitmap.svg" class="swiper-welcome_image" />
           </div>
           <div class="swiper-slide">
-            <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header"><span class="">3</span> burgery w cenie <span class="">1</span>.</h1>
-              <p class="swiper-slide__box__paragraph">
+            <div class="slide-container">
+              <h1 class="slide-container__header"><span class="">3</span> burgery w cenie <span class="">1</span>.</h1>
+              <p class="slide-container__paragraph">
                 Tylko w <span class="u-text-black-bold">czwartki</span>. Śpiesz się, nie marnuj życia na kiepskie jedzenie.
               </p>
               <a href="#" class="button button--blackshadow">Sprawdź !</a>
@@ -141,6 +141,16 @@
         });
         // END
 
+        // AD/REMOVE HAMBURGER CLICKED CLASS & CLOSE FIXED MENU
+        // START 
+        $(window).resize(function () {
+          if ($(window).width() > 1000) { 
+            $(".nav").removeClass("open-bg");
+            $(".hamburger").removeClass("clicked");
+          }
+        });
+        // END
+  
         // MAIN SWIPER INIT
         // START
         const swiper = new Swiper(".swiper-main", {

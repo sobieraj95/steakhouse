@@ -23,6 +23,11 @@
     &.clicked ~ .nav__website-menu,
     &.clicked ~ .nav__user-menu {
       display: flex;
+    }
+
+    &.clicked ~ .nav__website-menu,
+    &.clicked ~ .nav__user-menu {
+      display: flex;
       z-index: 15;
       height: auto;
       flex-direction: column;
@@ -41,6 +46,7 @@
       margin: 0 10rem;
       opacity: 0;
       visibility: hidden;
+      display: none;
       transition: all 0.5s ease;
       transform: translateX(-500%);
     }
@@ -67,6 +73,7 @@
       margin: 0.5rem 0;
       font-size: 16px;
       height: auto;
+      width: 30rem;
     }
 
     img {
@@ -112,14 +119,12 @@
     z-index: 1000;
     display: flex;
     justify-content: space-evenly;
+    transition: background-color 0.3s;
   }
 }
 
-
-
 // ADVERTISEMENTS BOX
 .advertisements {
-
   .ad {
     position: relative;
     display: flex;

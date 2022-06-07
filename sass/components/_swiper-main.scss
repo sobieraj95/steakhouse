@@ -23,7 +23,7 @@
       }
     }
 
-    &__box {
+    .slide-container{
       display: flex;
       flex-direction: column;
       padding-left: 15rem;
@@ -140,7 +140,7 @@
 
     &-bullet-active {
       border: 0.2rem solid $color-secondary;
-      transform: scale(1.5);
+      transform: scale(1.3);
       transition: all 1s ease;
     }
   }

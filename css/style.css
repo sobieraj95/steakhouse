@@ -157,35 +157,35 @@ body {
       .swiper-main .swiper-slide img {
         order: 1;
         border-radius: 1rem; } }
-  .swiper-main .swiper-slide__box {
+  .swiper-main .swiper-slide .slide-container {
     display: flex;
     flex-direction: column;
     padding-left: 15rem;
     padding-top: 10.5rem;
     width: 57rem; }
     @media (max-width: 75em) {
-      .swiper-main .swiper-slide__box {
+      .swiper-main .swiper-slide .slide-container {
         padding: 0 5rem;
         justify-content: center;
         align-items: center;
         width: auto; } }
     @media (max-width: 62.5em) {
-      .swiper-main .swiper-slide__box {
+      .swiper-main .swiper-slide .slide-container {
         order: 2;
         margin: 5rem 0; } }
-    .swiper-main .swiper-slide__box__header {
+    .swiper-main .swiper-slide .slide-container__header {
       font-style: normal;
       font-weight: 700;
       font-size: 5.6rem;
       line-height: 6.5rem;
       color: black; }
       @media (max-width: 62.5em) {
-        .swiper-main .swiper-slide__box__header {
+        .swiper-main .swiper-slide .slide-container__header {
           padding: 0 5rem; } }
-      .swiper-main .swiper-slide__box__header span {
+      .swiper-main .swiper-slide .slide-container__header span {
         position: relative;
         color: white; }
-      .swiper-main .swiper-slide__box__header span::before {
+      .swiper-main .swiper-slide .slide-container__header span::before {
         content: "";
         position: absolute;
         top: 57%;
@@ -196,14 +196,14 @@ body {
         z-index: -1;
         transform: translate(-50%, -57%); }
         @media (max-width: 62.5em) {
-          .swiper-main .swiper-slide__box__header span::before {
+          .swiper-main .swiper-slide .slide-container__header span::before {
             width: 109%;
             height: 76%; } }
       @media (max-width: 75em) {
-        .swiper-main .swiper-slide__box__header {
+        .swiper-main .swiper-slide .slide-container__header {
           text-align: center;
           font-size: 4rem; } }
-    .swiper-main .swiper-slide__box__paragraph {
+    .swiper-main .swiper-slide .slide-container__paragraph {
       margin-top: 2.8rem;
       width: 40.6rem;
       font-family: "Rubik";
@@ -212,9 +212,9 @@ body {
       font-size: 2rem;
       line-height: 2.5rem; }
       @media (max-width: 75em) {
-        .swiper-main .swiper-slide__box__paragraph {
+        .swiper-main .swiper-slide .slide-container__paragraph {
           text-align: center; } }
-    .swiper-main .swiper-slide__box .button {
+    .swiper-main .swiper-slide .slide-container .button {
       margin-top: 3.6rem; }
 
 .swiper-main .swiper-pagination {
@@ -245,7 +245,7 @@ body {
     margin-right: 2.2rem; }
   .swiper-main .swiper-pagination-bullet-active {
     border: 0.2rem solid black;
-    transform: scale(1.5);
+    transform: scale(1.3);
     transition: all 1s ease; }
 
 .containter {
@@ -259,6 +259,9 @@ body {
   align-content: stretch;
   padding: 0 14.8rem;
   box-shadow: 0px 1px 21px rgba(0, 0, 0, 0.052); }
+  @media (max-width: 75em) {
+    .nav {
+      padding: 0 4rem; } }
   @media (max-width: 62.5em) {
     .nav {
       height: 0;
@@ -318,6 +321,9 @@ body {
       display: flex; } }
   .nav__menu-toggle-button.clicked ~ .nav__website-menu,
   .nav__menu-toggle-button.clicked ~ .nav__user-menu {
+    display: flex; }
+  .nav__menu-toggle-button.clicked ~ .nav__website-menu,
+  .nav__menu-toggle-button.clicked ~ .nav__user-menu {
     display: flex;
     z-index: 15;
     height: auto;
@@ -334,6 +340,7 @@ body {
       margin: 0 10rem;
       opacity: 0;
       visibility: hidden;
+      display: none;
       transition: all 0.5s ease;
       transform: translateX(-500%); } }
 
@@ -356,7 +363,8 @@ body {
       justify-content: center;
       margin: 0.5rem 0;
       font-size: 16px;
-      height: auto; } }
+      height: auto;
+      width: 30rem; } }
   .nav__link img {
     filter: invert(0);
     transition: all 0.2s; }
@@ -388,7 +396,8 @@ body {
   background-color: white;
   z-index: 1000;
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  transition: background-color 0.3s; }
 
 .advertisements .ad {
   position: relative;
