@@ -18,7 +18,7 @@
     "steakhouse",
     "restaurant"
   ],
-  "author": "sobieraj",
+  "author": "sobieraj95",
   "license": "ISC",
   "dependencies": {
     "node-sass": "^7.0.1"

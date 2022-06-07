@@ -1,5 +1,6 @@
 @import "../../sass/abstracts/_variables.scss";
 @import "../../sass/abstracts/mixins";
+
 .containter {
   position: relative;
   background-color: $color-primary;
@@ -15,7 +16,6 @@
 
  
 }
-
 .swiper-welcome {
   display: flex;
   overflow: hidden;

@@ -1,4 +1,8 @@
 .nav {
+
+
+
+
   &__menu-toggle-button {
     display: none;
     margin: 2.5rem auto;
@@ -12,6 +16,10 @@
     }
   }
 
+
+
+
+
   &__logo {
     margin-right: 4rem;
 
@@ -20,9 +28,7 @@
     }
   }
 
-  @include respond(t1200) {
-    padding: 0 5rem;
-  }
+  
 
   @include respond(t1000) {
     height: 0;
