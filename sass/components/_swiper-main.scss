@@ -1,7 +1,5 @@
-@import "../abstracts/mixins";
-@import "../abstracts/variables";
+.swiper-main {
 
-.swiper-welcome {
   .swiper-slide {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,12 +28,13 @@
       flex-direction: column;
       padding-left: 15rem;
       padding-top: 10.5rem;
+      width: 57rem;
 
       @include respond(t1200) {
-        padding-left: 0rem;
-        padding-top: 0rem;
+        padding: 0 5rem;
         justify-content: center;
         align-items: center;
+        width: auto;
       }
 
       @include respond(t1000) {
@@ -54,6 +53,7 @@
         @include respond(t1000) {
           padding: 0 5rem;
         }
+        
         span {
           position: relative;
           color:$color-primary;

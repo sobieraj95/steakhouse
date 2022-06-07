@@ -5,7 +5,7 @@
   position: relative;
   background-color: $color-primary;
 }
-// NAVIGATION PANEL
+// NAVIGATION CONTAINER
 .nav {
   height: 8.1rem;
   display: flex;
@@ -14,9 +14,14 @@
   padding: 0 14.8rem;
   box-shadow: 0px 1px 21px rgba($color-secondary, 0.052);
 
- 
+  @include respond(t1000) {
+    height: 0;
+    flex-direction: column;
+  }
 }
-.swiper-welcome {
+
+// MAIN SWIPER CONTAINER
+.swiper-main {
   display: flex;
   overflow: hidden;
   position: relative;
@@ -24,7 +29,7 @@
   @include respond(t1000) {
     margin-top: 1.6rem;
     margin-right: 1.6rem;
-    margin-left:1.6rem;
+    margin-left: 1.6rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
   }
@@ -47,8 +52,7 @@
   }
 }
 
-
-// ADVERTISEMENTS BOX
+// ADVERTISEMENTS CONTAINER
 .advertisements {
   margin: 0 3.6rem;
   height: 41.5rem;

@@ -1,7 +1,12 @@
+// NAVIGATION PANEL
 .nav {
+  &__logo {
+    margin-right: 4rem;
 
-
-
+    @include respond(t1000) {
+      display: none;
+    }
+  }
 
   &__menu-toggle-button {
     display: none;
@@ -14,28 +19,9 @@
     @include respond(t1000) {
       display: flex;
     }
-  }
 
-
-
-
-
-  &__logo {
-    margin-right: 4rem;
-
-    @include respond(t1000) {
-      display: none;
-    }
-  }
-
-  
-
-  @include respond(t1000) {
-    height: 0;
-    flex-direction: column;
-
-    &__menu-toggle-button.clicked ~ &__website-menu,
-    &__menu-toggle-button.clicked ~ &__user-menu {
+    &.clicked ~ .nav__website-menu,
+    &.clicked ~ .nav__user-menu {
       display: flex;
       z-index: 15;
       height: auto;
@@ -75,11 +61,6 @@
     align-items: center;
     transition: all 0.3s ease;
 
-    img {
-      filter: invert(0);
-      transition: all 0.2s;
-    }
-
     @include respond(t1000) {
       padding: 2rem auto;
       justify-content: center;
@@ -87,36 +68,39 @@
       font-size: 16px;
       height: auto;
     }
-  }
-
-  &__link:hover {
-    background-color: $color-tertiary;
-    color: $color-primary;
-    fill: $color-primary;
 
     img {
-      filter: invert(1);
+      filter: invert(0);
+      transition: all 0.2s;
     }
 
-    @include respond(t1000) {
-      box-shadow: 0px 14px 22px 3px rgba($color-secondary, 0.4);
-      transform: translateY(-3px) scale(1.1);
+    &:hover {
+      background-color: $color-tertiary;
+      color: $color-primary;
+      fill: $color-primary;
+
+      img {
+        filter: invert(1);
+      }
+
+      @include respond(t1000) {
+        box-shadow: 0px 1.4rem 2.2rem 3px rgba($color-secondary, 0.4);
+        transform: translateY(-3px) scale(1.1);
+      }
+    }
+
+    &.active {
+      background-color: $color-tertiary;
+      color: $color-primary;
+      fill: $color-primary;
+
+      img {
+        filter: invert(1);
+      }
     }
   }
 
-  .active {
-    background-color: $color-tertiary;
-    color: $color-primary;
-    fill: $color-primary;
-
-    img {
-      filter: invert(1);
-    }
-  }
-}
-
-@include respond(t1000) {
-  .nav.open-bg {
+  &.open-bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -130,7 +114,12 @@
     justify-content: space-evenly;
   }
 }
+
+
+
+// ADVERTISEMENTS BOX
 .advertisements {
+
   .ad {
     position: relative;
     display: flex;
@@ -229,36 +218,32 @@
         display: none;
       }
     }
-  }
 
-  .ad:first-child {
-    margin-right: 1.6rem;
-    @include respond(t1000) {
-      margin-right: 0rem;
+    &:first-child {
+      margin-right: 1.6rem;
+
+      @include respond(t1000) {
+        margin-right: 0rem;
+        margin-bottom: 1.6rem;
+      }
     }
-  }
 
-  @include respond(t1000) {
-    .ad:not(:first-child) {
-      margin-top: 1.6rem;
+    &.bg1::after {
+      content: "";
+      background-image: linear-gradient(90deg, $color-secondary 1.82%, rgba($color-secondary, 0.0001) 99.07%);
+      mix-blend-mode: normal;
+      opacity: 0.5;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
     }
-  }
 
-  .bg1::after {
-    content: "";
-    background-image: linear-gradient(90deg, $color-secondary 1.82%, rgba($color-secondary, 0.0001) 99.07%);
-    mix-blend-mode: normal;
-    opacity: 0.5;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-  }
-
-  .bg2 {
-    background-color: $color-secondary;
+    &.bg2 {
+      background-color: $color-secondary;
+    }
   }
 }

@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="containter">
+      <!-- NAVIGATION  -->
       <nav class="nav">
         <button class="hamburger nav__menu-toggle-button"></button>
         <div id="nav__websitegi-menu" class="nav__website-menu">
@@ -26,12 +27,12 @@
         <div id="nav__user-menu" class="nav__user-menu">
           <a href="#" class="nav__link"> <img src="img/myaccount.svg" /><span class="nav__link-text">Moje konto</span> </a>
           <a href="#" class="nav__link"> <img src="img/bash.svg" /><span class="nav__link-text">Koszyk</span> </a>
-
           <a href="#" class="nav__link active"> <img src="img/order.svg" /><span class="nav__link-text">Zamów</span> </a>
         </div>
       </nav>
 
-      <div class="swiper-welcome">
+      <!-- MAIN SWIPER  -->
+      <div class="swiper-main">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="swiper-slide__box">
@@ -68,6 +69,7 @@
         <div class="swiper-pagination"></div>
       </div>
 
+      <!-- LOGOBAR SWIPER  -->
       <div class="swiper-logobar-container">
         <div class="swiper-logobar">
           <div class="swiper-wrapper">
@@ -89,6 +91,8 @@
           </div>
         </div>
       </div>
+
+      <!-- ADVERTISEMENTS  -->
       <div class="advertisements">
         <div class="ad bg1">
           <p class="ad__bigparagraph">Zestaw dla 3 osób</p>
@@ -110,12 +114,16 @@
       </div>
 
       <script>
-        // AD/REMOVE ACTIVE STATE MENU
+        // AD/REMOVE MENU ACTIVE CLASS
+        // START
         $(".nav__link").on("click", function () {
           $(".nav__link").removeClass("active");
           $(this).addClass("active");
         });
+        // END
 
+        // AD/REMOVE HAMBURGER CLICKED CLASS & OPEN FIXED MENU
+        // START
         $(".hamburger").on("click", function () {
           const burger = $(this).attr("class").split(/\s+/);
           if (!burger.includes("clicked")) {
@@ -131,9 +139,11 @@
           $(".hamburger").removeClass("clicked");
           $(".nav").removeClass("open-bg");
         });
+        // END
 
-        //SIMPLY MAIN SWIPER INIT
-        const swiper = new Swiper(".swiper-welcome", {
+        // MAIN SWIPER INIT
+        // START
+        const swiper = new Swiper(".swiper-main", {
           direction: "horizontal",
           loop: true,
           speed: 1000,
@@ -151,7 +161,10 @@
             clickable: true,
           },
         });
-        //SIMPLY LOGOBAT SWIPER INIT
+        // END
+
+        // LOGOBAR SWIPER INIT
+        // START
         const swiper__logobar = new Swiper(".swiper-logobar", {
           direction: "horizontal",
           loop: true,
@@ -190,6 +203,7 @@
             },
           },
         });
+        // END
       </script>
     </div>
   </body>
