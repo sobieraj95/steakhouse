@@ -1,46 +1,44 @@
 @import "../abstracts/_variables.scss";
 
 .hamburger {
-  width: 3.5rem;
-  height: 0.5rem;
+  width: 40px;
+  height: 35px;
   border: 0;
-  margin: 1.5rem 0;
-  background-color: $color-tertiary;
+  border-top: 5px solid $color-secondary;
+  background: transparent;
   position: relative;
-  transition: 0.2s all linear;
+  transition: .2s border-color linear;
 
   &::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: $color-secondary;
-    transform: translateY(-7px);
-    transition: 0.2s transform linear;
+    border-top: 5px solid $color-tertiary;
+    transform: translateY(10px);
+    transition: .2s transform linear;
   }
-
   &::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: $color-secondary;
-    transform: translateY(7px);
-    transition: 0.2s transform linear;
+    border-top: 5px solid $color-secondary;
+    transform: translateY(25px);
+    transition: .2s transform linear;
   }
 
   &.clicked {
-    background-color: transparent;
+    border: transparent;
   }
 
   &.clicked::before {
-    transform: rotate(45deg);
+    border-color: $color-secondary;
+    transform: translateY(15px) rotate(45deg);
   }
   &.clicked::after {
-    transform: rotate(-45deg);
+    transform: translateY(15px) rotate(-45deg);
   }
 }

@@ -54,6 +54,12 @@ body {
   text-align: center;
   background-color: black; }
 
+.u-text-back-black-white {
+  padding: 0px .8rem;
+  text-align: center;
+  background-color: black;
+  color: white; }
+
 .u-text-back-red {
   padding: 1px 5px;
   text-align: center;
@@ -87,39 +93,38 @@ body {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3); }
 
 .hamburger {
-  width: 3.5rem;
-  height: 0.5rem;
+  width: 40px;
+  height: 35px;
   border: 0;
-  margin: 1.5rem 0;
-  background-color: #920303;
+  border-top: 5px solid black;
+  background: transparent;
   position: relative;
-  transition: 0.2s all linear; }
+  transition: .2s border-color linear; }
   .hamburger::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: black;
-    transform: translateY(-7px);
-    transition: 0.2s transform linear; }
+    border-top: 5px solid #920303;
+    transform: translateY(10px);
+    transition: .2s transform linear; }
   .hamburger::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
-    background-color: black;
-    transform: translateY(7px);
-    transition: 0.2s transform linear; }
+    border-top: 5px solid black;
+    transform: translateY(25px);
+    transition: .2s transform linear; }
   .hamburger.clicked {
-    background-color: transparent; }
+    border: transparent; }
   .hamburger.clicked::before {
-    transform: rotate(45deg); }
+    border-color: black;
+    transform: translateY(15px) rotate(45deg); }
   .hamburger.clicked::after {
-    transform: rotate(-45deg); }
+    transform: translateY(15px) rotate(-45deg); }
 
 .swiper-logobar {
   height: 7.7rem;
@@ -215,13 +220,14 @@ body {
   .swiper-welcome .swiper-pagination-bullet:not(:last-child), .swiper-welcome .swiper-pagination-bullet-active:not(:last-child) {
     margin-right: 2.2rem; }
   .swiper-welcome .swiper-pagination-bullet {
-    background-color: #EFEFEF;
+    background-color: #efefef;
     border: 0.2rem solid transparent;
+    transform: scale(1);
     transition: all 1s ease-in-out; }
   .swiper-welcome .swiper-pagination-bullet-active {
-    transform: scale(1.3);
     background-color: EFEFEF;
     border: 0.2rem solid black;
+    transform: scale(1.3);
     transition: all 1s ease-in-out; }
 
 .containter {
@@ -283,6 +289,12 @@ body {
     .nav__menu-toggle-button {
       display: flex; } }
 
+.nav__logo {
+  margin-right: 4rem; }
+  @media (max-width: 62.5em) {
+    .nav__logo {
+      display: none; } }
+
 @media (max-width: 75em) {
   .nav {
     padding: 0 5rem; } }
@@ -296,20 +308,21 @@ body {
       display: flex;
       z-index: 15;
       height: auto;
-      flex-direction: column; } }
-
-.nav__logo {
-  margin-right: 4rem; }
-  @media (max-width: 62.5em) {
-    .nav__logo {
-      display: none; } }
+      flex-direction: column;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0); } }
 
 .nav__website-menu, .nav__user-menu {
   display: flex;
   align-items: center; }
   @media (max-width: 62.5em) {
     .nav__website-menu, .nav__user-menu {
-      display: none; } }
+      margin: 0 10rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all .5s ease;
+      transform: translateX(-500%); } }
 
 .nav__user-menu > * {
   display: flex;
@@ -322,8 +335,7 @@ body {
   padding: 1rem 2.45rem;
   display: flex;
   border-radius: 1rem;
-  align-items: center;
-  transition: all 0.3s; }
+  align-items: center; }
   .nav__link img {
     filter: invert(0);
     transition: all 0.3s; }
