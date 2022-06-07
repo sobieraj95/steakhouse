@@ -16,18 +16,18 @@
         <button class="hamburger nav__menu-toggle-button"></button>
         <div id="nav__website-menu" class="nav__website-menu">
           <img class="nav__logo" src="img/logo.png" alt="logo" />
-          <a href="#" class="nav__link">steaks</a>
-          <a href="#" class="nav__link">burgers</a>
-          <a href="#" class="nav__link">french fries</a>
-          <a href="#" class="nav__link">drinks</a>
-          <a href="#" class="nav__link">gdzie dowozimy?</a>
-          <a href="#" class="nav__link">kontakt</a>
+          <a href="#" class="nav__link">Steaks</a>
+          <a href="#" class="nav__link">Burgers</a>
+          <a href="#" class="nav__link">French fries</a>
+          <a href="#" class="nav__link">Drinks</a>
+          <a href="#" class="nav__link"><span>Gdzie dowozimy?</span></a>
+          <a href="#" class="nav__link">Kontakt</a>
         </div>
         <div id="nav__user-menu" class="nav__user-menu">
-          <a href="#" class="nav__link"> <img src="img/myaccount.svg" /><span class="nav__link-text">moje konto</span> </a>
-          <a href="#" class="nav__link"> <img src="img/bash.svg" /><span class="nav__link-text">koszyk</span> </a>
+          <a href="#" class="nav__link"> <img src="img/myaccount.svg" /><span class="nav__link-text">Moje konto</span> </a>
+          <a href="#" class="nav__link"> <img src="img/bash.svg" /><span class="nav__link-text">Koszyk</span> </a>
 
-          <a href="#" class="nav__link active"> <img src="img/order.svg" /><span class="nav__link-text">zamów</span> </a>
+          <a href="#" class="nav__link active"> <img src="img/order.svg" /><span class="nav__link-text">Zamów</span> </a>
         </div>
       </nav>
 
@@ -35,7 +35,7 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header"><span class="u-text-back-black-white">Rabat 10%</span> na pierwsze zamówienie!</h1>
+              <p class="swiper-slide__box__header"><span class="u-text-back-black-white">Rabat 10%</span> na pierwsze zamówienie!</p>
               <p class="swiper-slide__box__paragraph">
                 Do 20 stycznia złóż zamówienie na stronie i skorzystaj z <span class="u-text-black-bold">promocji -10%</span>. Spiesz się, czas trwania promocji
                 do końca lutego.
@@ -46,7 +46,7 @@
           </div>
           <div class="swiper-slide">
             <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header">Dodatkowe <span class="u-text-back-black-white">20%</span> na drugie zamówienie!</h1>
+              <p class="swiper-slide__box__header">Dodatkowe <span class="u-text-back-black-white">20%</span> na drugie zamówienie!</p>
               <p class="swiper-slide__box__paragraph">
                 Złóż zamówienie, a następnie dokonaj kolejnego <span class="u-text-black-bold">w ciągu tygodnia</span>. Czas promocji nieograniczony.
               </p>
@@ -56,9 +56,9 @@
           </div>
           <div class="swiper-slide">
             <div class="swiper-slide__box">
-              <h1 class="swiper-slide__box__header">
+              <p class="swiper-slide__box__header">
                 <span class="u-text-back-black-white">3</span> burgery w cenie <span class="u-text-back-black-white">1</span>.
-              </h1>
+              </p>
               <p class="swiper-slide__box__paragraph">
                 Tylko w <span class="u-text-black-bold">czwartki</span>. Śpiesz się, nie marnuj życia na kiepskie jedzenie.
               </p>
@@ -74,19 +74,19 @@
         <div class="swiper-logobar">
           <div class="swiper-wrapper">
             <div class="swiper-slide slider-positioner">
-              <img class="shutters-slider-image" src="img/Bitmap-4.png" />
+              <a href="https://www.pyszne.pl/"><img class="shutters-slider-image" src="img/Bitmap-4.png" /></a>
             </div>
             <div class="swiper-slide slider-positioner">
-              <img class="shutters-slider-image" src="img/Bitmap -5.png" />
+              <a href="https://deligoo.pl/"><img class="shutters-slider-image" src="img/Bitmap -5.png" /></a>
             </div>
             <div class="swiper-slide slider-positioner">
-              <img class="shutters-slider-image" src="img/Bitmap-1.png" />
+              <a href="https://glovoapp.com/pl/pl/"><img class="shutters-slider-image" src="img/Bitmap-1.png" /></a>
             </div>
             <div class="swiper-slide slider-positioner">
-              <img class="shutters-slider-image" src="img/Bitmap-2.png" />
+              <a href="https://www.ubereats.com/pl"><img class="shutters-slider-image" src="img/Bitmap-2.png" /></a>
             </div>
             <div class="swiper-slide slider-positioner">
-              <img class="shutters-slider-image" src="img/Bitmap-3.png" />
+              <a href="https://food.bolt.eu/pl-pl"><img class="shutters-slider-image" src="img/Bitmap-3.png" /></a>
             </div>
           </div>
         </div>
@@ -139,11 +139,11 @@
           direction: "horizontal",
           loop: true,
           speed: 1000,
-
-          autoplay: {
-            autoplay: false,
-            disableOnInteraction: false,
-          },
+          // autoplay: {
+          //   delay:10000,
+          //   autoplay: false,
+          //   disableOnInteraction: false,
+          // },
           pagination: {
             el: ".swiper-pagination",
             type: "bullets",
@@ -157,8 +157,8 @@
         const swiper__logobar = new Swiper(".swiper-logobar", {
           direction: "horizontal",
           loop: true,
-          speed: 500,
-          delay: 1000,
+          speed: 1000,
+          delay:1000,
           allowTouchMove: false,
           loopFillGroupWithBlank: true,
           autoplay: {

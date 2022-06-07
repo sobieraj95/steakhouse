@@ -4,6 +4,7 @@
   width: 3.5rem;
   height: 0.5rem;
   border: 0;
+  margin: 1.5rem 0;
   background-color: $color-tertiary;
   position: relative;
   transition: 0.2s all linear;
@@ -16,9 +17,10 @@
     height: 100%;
     width: 100%;
     background-color: $color-secondary;
-    transform: translateY(-10px);
+    transform: translateY(-7px);
     transition: 0.2s transform linear;
   }
+
   &::after {
     content: "";
     position: absolute;
@@ -27,7 +29,7 @@
     height: 100%;
     width: 100%;
     background-color: $color-secondary;
-    transform: translateY(10px);
+    transform: translateY(7px);
     transition: 0.2s transform linear;
   }
 

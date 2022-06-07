@@ -68,11 +68,10 @@
     }
 
     @include respond(t1000) {
-      width: 25rem;
       padding: 2rem auto;
       justify-content: center;
       margin: 0.5rem 0;
-      font-size: 1.7rem;
+      font-size: 16px;
       height: auto;
     }
   }
@@ -102,6 +101,7 @@
     }
   }
 }
+
 @include respond(t1000) {
   .nav.open-bg {
     position: fixed;
@@ -111,7 +111,7 @@
     height: 100vh;
     padding: 0;
     color: $color-primary;
-    background-color: rgba(255, 255, 255, 0.925);
+    background-color: $color-primary;
     z-index: 1000;
     display: flex;
     justify-content: space-evenly;
