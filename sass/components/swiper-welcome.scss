@@ -59,13 +59,13 @@
         span::before {
           content:"";
           position: absolute;
-          top:50%;
+          top:56%;
           left:50%;
           width: 103%;
-          height: 77%;
+          height: 70%;
           background-color: $color-secondary;
           z-index: -1;
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -56%);
         }
 
         @include respond(t1200) {

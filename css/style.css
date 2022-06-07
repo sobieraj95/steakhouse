@@ -182,13 +182,13 @@ body {
       .swiper-welcome .swiper-slide__box__header span::before {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 56%;
         left: 50%;
         width: 103%;
-        height: 77%;
+        height: 70%;
         background-color: black;
         z-index: -1;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -56%); }
       @media (max-width: 75em) {
         .swiper-welcome .swiper-slide__box__header {
           text-align: center;
